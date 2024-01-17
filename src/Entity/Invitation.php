@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Repository\InvitationRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
