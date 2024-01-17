@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "47c73147-3401-4966-b238-835b42f7eec7",
+		"name": "Loudly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18140614"
+	},
+	"item": [
+		{
+			"name": "Send new invitation",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"senderId\": 1,\n    \"invitedEmail\": \"asd@asd.ss\",\n    \"invitedName\": \"TestUser\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/index.php/api/invitation/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"invitation",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch invitations",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/index.php/api/invitations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"invitations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel invitation",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/index.php/api/invitation/cancel/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"invitation",
+						"cancel",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decline Invitation",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/index.php/api/invitation/respond/2/declined",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"invitation",
+						"respond",
+						"2",
+						"declined"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Invitation",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/index.php/api/invitation/respond/1/accepted",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"index.php",
+						"api",
+						"invitation",
+						"respond",
+						"1",
+						"accepted"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
